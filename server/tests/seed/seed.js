@@ -21,10 +21,10 @@ const users = [{
   _id: userOneId,
   email: 'john@example.com',
   password: 'user1pass',
-  tokens: {
+  tokens: [{
     access: 'auth',
     token: jwt.sign({_id: userOneId.toHexString(), access: 'auth'}, 'abc123').toString()
-  }
+  }]
 },{
   _id: userTwoId,
   email: 'jane@example.com',
